@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  # Service de l'API de prédiction
+  api:
+    build: .  # Utilise le Dockerfile qui se trouve dans le dossier courant
+    container_name: ocp_four_api  # Nom du conteneur
+    ports:
+      - "8000:8000"  # Mappe le port 8000 de ton PC vers le port 8000 du conteneur
+    volumes:
+      # Monte les dossiers locaux DANS le conteneur.
+      # Cela permet de modifier le code ou les données sans rebuild.
+      - ./src:/app/src
+      - ./data:/app/data
+      - ./models:/app/models
+      - ./logs:/app/logs
+    environment:
+      - ENV=development  # Optionnel : variable d'environnement pour indiquer le mode dev
+    command: uvicorn src.api:app --host 0.0.0.0 --port 8000 --reload
+    # Le flag --reload est super important en développement :
+    # il redémarre le serveur automatiquement quand tu modifies un fichier .py

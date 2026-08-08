@@ -1,1 +1,28 @@
+# Données brutes / générées
 data/
+
+# Sujet de stage (document confidentiel)
+sujet de stage (1).pdf
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+venv/
+.venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs
+logs/
+
+# Modèles entraînés (régénérés par l'entraînement)
+models/*.joblib
+
+# Environnement
+.env
+
+# IDE
+.vscode/
+.idea/

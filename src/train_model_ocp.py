@@ -14,7 +14,7 @@ print("🚀 LANCEMENT DU MODELE XGBOOST - FOUR OCP")
 print("="*50)
 
 # 1. Vérifier que le fichier est bien là
-fichier = 'donnees_four_ocp_2026.csv'
+fichier = 'data/donnees_four_ocp_2026.csv'
 if not os.path.exists(fichier):
     print(f"❌ Erreur : Le fichier '{fichier}' est introuvable.")
     print("📁 Assure-toi que datasetscript.py a bien généré ce fichier.")

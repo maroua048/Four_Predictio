@@ -1,0 +1,11 @@
+.git
+.vscode
+__pycache__
+*.pyc
+.env
+venv
+logs/
+notebooks/
+*.log
+*.md
+.gitignore

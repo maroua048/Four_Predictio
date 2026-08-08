@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Charge le fichier
-df = pd.read_csv('donnees_four_ocp_2026.csv')
+df = pd.read_csv('data/donnees_four_ocp_2026.csv')
 df['Date'] = pd.to_datetime(df['Date'])
 
 # 1. Vérifie le nombre de jours
